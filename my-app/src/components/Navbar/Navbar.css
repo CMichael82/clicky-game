@@ -1,0 +1,33 @@
+.navbar {
+	background-color: #77AE2A; 
+}
+
+.logo {
+	height: 75%;
+	width: 75%;
+}
+
+li {
+	text-decoration: none;
+	color: whitesmoke;
+	font-size: 24px;
+}
+
+.brand {
+	width: 100px;
+}
+
+.title {
+	vertical-align:middle;
+	margin: auto;
+	text-align: center;
+	font-size: 56px;
+	color: #205B85;
+	font-weight: bold;
+	}
+
+	h6 {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
