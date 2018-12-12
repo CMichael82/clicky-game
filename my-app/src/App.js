@@ -15,7 +15,8 @@ class App extends Component {
 			alreadyClicked: [],
 			score: 0,
 			topScore: 0,
-			result: "Click on an image to earn points, but don't click on any more than once!"
+			result: "Click on an image to earn points, but don't click on any more than once!",
+			active: false,
 		};
 
 		this.checkIfClicked = this.checkIfClicked.bind(this);
@@ -39,10 +40,11 @@ class App extends Component {
 			this.setState({
 				score: 0,
 				alreadyClicked: [],
-				result: "YOU GUESSED INCORRECTLY!...START OVER."
+				result: "YOU GUESSED INCORRECTLY!...START OVER.",
+				active: true
 			});
-			if(this.state.score>this.state.topScore){
-				this.setState({topScore: this.state.score});
+			if (this.state.score > this.state.topScore) {
+				this.setState({ topScore: this.state.score });
 			}
 			this.shuffle(dogs);
 			console.log(this.state.alreadyClicked);
@@ -65,14 +67,16 @@ class App extends Component {
 	}
 
 	render() {
-		// console.log(this)
+		console.log(this)
 		return (
 			<React.Fragment>
 				<Navbar
 					score={this.state.score}
 					topScore={this.state.topScore}
 				></Navbar>
-				<Result result={this.state.result}></Result>
+				<Result
+					result={this.state.result}
+					active={this.state.active}></Result>
 				<Wrapper>
 					{this.state.dogs.map(pooch => (
 						<Card

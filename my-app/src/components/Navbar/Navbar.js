@@ -10,11 +10,11 @@ const Navbar = props => (
 			</div>
 			<div className="header">
 			 <h1 className="title">TOP DOG!</h1>
-			 <h6><em>(A Clicky Game)</em></h6>
+			 <h5><em>(A Clicky Game)</em></h5>
 			</div>
 			<ul className="navbar-nav">
-			<li className="nav-item">Score: {props.score} </li>
-			<li className="nav-item">Top Score: {props.topScore}</li>
+			<li className="nav-item">SCORE: {props.score} </li>
+			<li className="nav-item">TOP SCORE: {props.topScore}</li>
 		</ul>
 
 		</div>
