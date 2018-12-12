@@ -6,15 +6,15 @@ const Navbar = props => (
 	<nav className="navbar">
 		<div className="container">
 			<div className="brand">
-				<img className="logo" src="./images/paw.jpg"></img>
+				<img className="logo" src="./images/paw.jpg" alt=" "></img>
 			</div>
 			<div className="header">
 			 <h1 className="title">TOP DOG!</h1>
 			 <h6><em>(A Clicky Game)</em></h6>
 			</div>
 			<ul className="navbar-nav">
-			<li className="nav-item">Score: </li>
-			<li className="nav-item">Top Score: </li>
+			<li className="nav-item">Score: {props.score} </li>
+			<li className="nav-item">Top Score: {props.topScore}</li>
 		</ul>
 
 		</div>
