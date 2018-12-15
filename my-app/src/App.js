@@ -16,7 +16,6 @@ class App extends Component {
 			score: 0,
 			topScore: 0,
 			result: "Click on an image to earn points, but don't click on any more than once!",
-			active: false,
 		};
 
 		this.checkIfClicked = this.checkIfClicked.bind(this);
@@ -41,8 +40,7 @@ class App extends Component {
 				score: 0,
 				alreadyClicked: [],
 				result: "YOU GUESSED INCORRECTLY!...START OVER.",
-				active: true
-			});
+					});
 			if (this.state.score > this.state.topScore) {
 				this.setState({ topScore: this.state.score });
 			}
